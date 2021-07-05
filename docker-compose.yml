@@ -9,9 +9,11 @@ services:
     volumes:
       - mongo:/data
       - ./mongo/init:/docker-entrypoint-initdb.d
+      - ./mongo/keyfile:/etc/mongod-keyfile:ro
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
       TZ: Asia/Tokyo
+    command: mongod --auth --bind_ip_all --replSet rs0 --keyFile /etc/mongod-keyfile
 volumes:
   mongo:
