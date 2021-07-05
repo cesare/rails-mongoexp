@@ -79,6 +79,7 @@ development:
         # The name of the replica set to connect to. Servers provided as seeds that do
         # not belong to this replica set will be ignored.
         # replica_set: name
+        replica_set: rs0
 
         # Whether to connect to the servers via ssl. (default: false)
         # ssl: true
