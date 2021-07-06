@@ -23,11 +23,9 @@ development:
 
         # The name of the user for authentication.
         # user: 'user'
-        user: 'mongoexp'
 
         # The password of the user for authentication.
         # password: 'password'
-        password: 'mongoexp'
 
         # The user's database roles.
         # roles:
