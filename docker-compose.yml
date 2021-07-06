@@ -9,6 +9,7 @@ services:
     volumes:
       - mongo:/data
       - ./mongo/init:/docker-entrypoint-initdb.d
+      - ./mongo/init-replset-cluster.js:/init-replset-cluster.js
     environment:
       TZ: Asia/Tokyo
     command: mongod --bind_ip_all --replSet rs0
